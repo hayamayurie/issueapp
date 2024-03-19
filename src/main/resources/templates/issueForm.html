@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>イシュー新規作成</title>
+</head>
+<body>
+
+<form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
+    <input type="text" th:field="*{title}">
+    <textarea th:field="*{content}"></textarea>
+    <input type="date" th:field="*{period}">
+    <input type="text" th:field="*{importance}">
+    <button type="submit">作成</button>
+</form>
+</body>
+</html>
