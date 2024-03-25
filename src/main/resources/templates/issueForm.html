@@ -2,16 +2,44 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
     <title>イシュー新規作成</title>
 </head>
 <body>
 
-<form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
-    <input type="text" th:field="*{title}">
-    <textarea th:field="*{content}"></textarea>
-    <input type="date" th:field="*{period}">
-    <input type="text" th:field="*{importance}">
-    <button type="submit">作成</button>
-</form>
+<header>
+    <a th:href="@{/}">IssueApp</a>
+</header>
+
+<div class="page-title">
+    <h1>イシュー新規作成フォーム</h1>
+</div>
+
+<div class="form">
+    <form action="#" th:action="@{/issues}" th:method="post" th:object="${issueForm}">
+        <div class="form_title">
+            <h2 class="column-title">タイトル</h2>
+            <input type="text" id="title" th:field="*{title}">
+        </div>
+        <div class="form_content">
+            <h2 class="column-title">内容</h2>
+            <textarea id="content" th:field="*{content}"></textarea>
+        </div>
+
+        <div class="form_period">
+            <h2 class="column-title">期限</h2>
+            <input type="date" id="period" th:field="*{period}">
+        </div>
+
+        <div class="form_importance">
+            <h2 class="column-title">重要度</h2>
+            <input type="text" id="importance" th:field="*{importance}">
+        </div>
+
+        <div class="form_submit">
+            <button type="submit">作成</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>
