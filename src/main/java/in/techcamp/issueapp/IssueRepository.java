@@ -13,4 +13,7 @@ public interface IssueRepository {
 
     @Select("select * from issues")
     List<IssueEntity> findAll();
+
+    @Select("select * from issues where id = #{id}")
+    IssueEntity findById(long id);
 }
