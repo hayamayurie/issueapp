@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+
+<header>
+    <a th:href="@{/}">IssueApp</a>
+</header>
+
+<div class="page-title">
+    <h1>イシュー一覧</h1>
+</div>
+
+<div class="create-link">
+    <a th:href="@{/issueForm}">新規作成</a>
+</div>
+
+<table class="issue-table">
+    <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>内容</th>
+        <th>期限</th>
+        <th>重要度</th>
+    </tr>
+    <form method="post">
+        <tr th:each="issue:${issueList}">
+            <td th:text="${issue.getId()}"></td>
+            <td th:text="${issue.getTitle()}"></td>
+            <td th:text="${issue.getContent()}"></td>
+            <td th:text="${issue.getPeriod()}"></td>
+            <td th:text="${issue.getImportance()}"></td>
+        </tr>
+    </form>
+</table>
+
+</body>
+</html>

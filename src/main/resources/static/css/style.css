@@ -104,3 +104,50 @@ textarea:focus {
     color: #FFFFFF;
     font-size: 16px;
 }
+
+
+/********************************************
+ 一覧画面
+*********************************************/
+.create-link {
+    width: 100%;
+    padding: 0 60px 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create-link a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.issue-table {
+    margin: 0 auto;
+    border-collapse:  collapse;
+}
+
+.issue-table th,td {
+    height: 45px;
+    padding: 5px;
+    border: solid 1px #2c3e50;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.issue-table th {
+    background-color: #2c3e50;
+    color: #FFFFFF;
+}
+
+.issue-table th:nth-child(3) {
+    min-width: 600px;
+}
