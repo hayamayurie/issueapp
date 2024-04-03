@@ -29,7 +29,7 @@
     <form method="post">
         <tr th:each="issue:${issueList}">
             <td th:text="${issue.getId()}"></td>
-            <td th:text="${issue.getTitle()}"></td>
+            <td><a th:text="${issue.getTitle()}" th:href="@{/issues/{id}(id=${issue.getId()})}"></a></td>
             <td th:text="${issue.getContent()}"></td>
             <td th:text="${issue.getPeriod()}"></td>
             <td th:text="${issue.getImportance()}"></td>

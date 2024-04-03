@@ -151,3 +151,7 @@ textarea:focus {
 .issue-table th:nth-child(3) {
     min-width: 600px;
 }
+
+.issue-table a {
+    color: #2c3e50;
+}
