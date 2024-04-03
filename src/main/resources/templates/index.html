@@ -25,6 +25,7 @@
         <th>内容</th>
         <th>期限</th>
         <th>重要度</th>
+        <th class="header-delete">削除</th>
     </tr>
     <form method="post">
         <tr th:each="issue:${issueList}">
@@ -33,6 +34,7 @@
             <td th:text="${issue.getContent()}"></td>
             <td th:text="${issue.getPeriod()}"></td>
             <td th:text="${issue.getImportance()}"></td>
+            <td><button type="submit" th:formaction="@{/issues/{id}/delete(id=${issue.getId()})}">削除</button></td>
         </tr>
     </form>
 </table>
